@@ -71,7 +71,7 @@ def main():
                 st.write(msg["content"])
 
     # Chat input for new message
-    user_input = st.chat_input(placeholder="Please ask me your question…")
+    user_input = st.chat_input(placeholder="Put your dram aside and ask me your question...")
 
     # When a message is sent through the chat input
     if user_input:
