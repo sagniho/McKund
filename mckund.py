@@ -12,8 +12,8 @@ ASSISTANT_ID = st.secrets["McKund"]
 col1, col2 = st.columns([1, 4])
 
 # In the first column, display the logo
-#with col1:
-    #st.image('ny.png', width=150)  # Adjust the width as needed
+with col1:
+    st.image('isla.png', width=150)  # Adjust the width as needed
 
 # In the second column, display the title and subtitle
 with col2:
@@ -82,7 +82,7 @@ def main():
                 st.write(user_input)
 
         # Get the response from the assistant
-        with st.spinner('Working on this for you now...'):
+        with st.spinner('Hold your dram (and your panties)...'):
             response = send_message_get_response(ASSISTANT_ID, user_input)
             # Append the response to the session state
             st.session_state['messages'].append({'role': 'assistant', 'content': response})
