@@ -25,6 +25,8 @@ info_text = """
 This AI assistant, powered by GPT-4 technology with a knowledge cutoff in April 2024, was custom-built for R Mukund, a discerning scotch enthusiast. It taps directly into Mukund’s personal repertoire of knowledge and his meticulously curated scotch inventory. 
 This unique blend of expertise and personal collection allows the AI to tailor recommendations for exquisite drinks and thoughtful tasting flights for guests visiting Mukund. 
 Each consultation offers a personalized experience, reflecting Mukund's refined taste and deep appreciation for the craft of scotch.
+
+Drink responsibly!
 """
 
 
