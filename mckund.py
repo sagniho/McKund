@@ -33,10 +33,11 @@ Drink responsibly!
 
 
 st.info(info_text, icon="ℹ️")
+thread = client.beta.threads.create()
 
 def send_message_get_response(assistant_id, user_message):
     # Create a new thread
-    thread = client.beta.threads.create()
+    
 
     # Add user message to the thread
     message = client.beta.threads.messages.create(
