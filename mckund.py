@@ -89,7 +89,7 @@ def main():
                 st.write(user_input)
 
         # Get the response from the assistant
-        with st.spinner('Hold your dram (and your panties)...'):
+        with st.spinner('Hold your dram (and your hor-seas)...'):
             response = send_message_get_response(ASSISTANT_ID, user_input)
             # Append the response to the session state
             st.session_state['messages'].append({'role': 'assistant', 'content': response})
