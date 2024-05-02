@@ -41,20 +41,20 @@ def send_message_get_response(assistant_id, user_message):
 
     # Add user message to the thread
     message = client.beta.threads.messages.create(
-        thread_id=thread.id, role="user", content=user_message
+        thread_id=thread_id, role="user", content=user_message
     )
 
     # Run the assistant
     run = client.beta.threads.runs.create(
-        thread_id=thread.id,
+        thread_id=thread_id,
         assistant_id=assistant_id
     )
 
     # Retrieve the assistant's response
     while True:
-        run = client.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
+        run = client.beta.threads.runs.retrieve(thread_id=thread_id, run_id=run.id)
         if run.status == "completed":
-            messages = client.beta.threads.messages.list(thread_id=thread.id)
+            messages = client.beta.threads.messages.list(thread_id=thread_id)
             latest_message = messages.data[0]
             text = latest_message.content[0].text.value
             return text
