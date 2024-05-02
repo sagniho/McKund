@@ -33,10 +33,10 @@ Drink responsibly!
 
 
 st.info(info_text, icon="ℹ️")
-thread = client.beta.threads.create()
 
 def send_message_get_response(assistant_id, user_message):
     # Create a new thread
+    thread_id = st.session_state['thread']
     
 
     # Add user message to the thread
@@ -62,6 +62,8 @@ def send_message_get_response(assistant_id, user_message):
 
 
 def main(): 
+    if 'thread' not in st.session_state:
+        st.session_state['thread'] = client.beta.threads.create().id
     # Initialize messages in session state if not present
     if 'messages' not in st.session_state:
         st.session_state['messages'] = []
