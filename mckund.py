@@ -74,7 +74,7 @@ def main():
             with st.chat_message("user", avatar="🧑‍💻"):
                 st.write(msg["content"])
         else:
-            with st.chat_message("assistant", avatar="☀️"):
+            with st.chat_message("assistant", avatar="🥃"):
                 st.write(msg["content"])
 
     # Chat input for new message
